@@ -1,0 +1,41 @@
+
+
+/*
+past-base-css 
+div[class="container-out"] ul li{
+    margin-bottom: 1em;
+    //background-color: red;
+    border-radius加在这里才会有效果，加在子div上却没有
+    border-radius: 10px;
+}
+
+div[class="container-in"]{
+    padding:0.5em;
+}
+div[class="container-in"] p:nth-child(1){
+    line-height:1.6em;
+    font-size:1.5em;
+    font-weight: bold;
+    //background-color: pink;
+}
+div[class="container-in"] p:nth-child(2){
+    max-height: 100px;
+    overflow: hidden;
+    //background-color: green;
+}
+div[class="container-in"] p:nth-child(3){
+    text-align: right;
+    padding-right: 10px;
+    //background-color: grey;
+}
+
+div[class="back"], div[class="delete"]{
+    float: right;
+}
+div[class="back"] span, div[class="delete"] span{
+    margin-right: 10px;
+    padding:5px;
+    border:1px black solid;
+    border-radius:5px;
+}
+*/

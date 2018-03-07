@@ -1,0 +1,97 @@
+<div id="header">
+	<div class="container">
+		<h1>Welcome to my blog!</h1>
+		<span>please enjoy yourself!</span>
+	</div>
+</div>
+<div class="container">
+	<section class="row">
+		<aside class="col-md-2 col-lg-2 sidebar">
+			<div>
+				<ul class="nav nav-sidebar">
+					<li><a routerLink= "/home">Home</a></li>
+					<li><a routerLink= "/blogs">Blogs</a></li>
+					<li><a routerLink= "/add">AddBlog</a></li>
+					<li><a routerLink= "/music">Music</a></li>
+				</ul>
+			</div>
+		</aside>
+		<article class="col-md-10 col-lg-10 main">
+			<div>
+				<router-outlet></router-outlet>
+			</div>
+		</article>
+	</section>	
+</div>
+<div class="footer">
+	<div class="container">		
+		<p class="text-center">
+			Copyrights.rjw.1995-2017
+		</p>
+	</div>
+</div>
+
+
+
+
+
+<!--
+// 下面不能实现栏目底部固定，但不会覆盖body内容，且能随着滚动条显示，即滑到底部才会显示，不会像下面那样一直占据底部
+// 通过其他办法将其挤到下面
+
+<div id="footer" class="container-fuild">
+	<div class="navbar navbar-default navbar-static-bottom text-center">
+		<p>
+			Copyrights.rjw.1995-2017
+		</p>
+	</div>		
+</div>	
+
+
+
+// 下面的会覆盖body内容，但能实现底部固定，但会一直保持显示
+// 如果不想覆盖body内容，则需要在body加padding-bottom 但这么做还需要针对不同的页面MediaQuery设置不同的padding-bottom值
+// 或直接对底部加 margin-top
+
+<div id="footer" class="container">
+	<div class="navbar navbar-default navbar-fixed-bottom text-center">
+		<p>
+			Copyrights.rjw.1995-2017
+		</p>
+	</div>		
+</div>	
+-->
+
+
+
+
+<!--
+<header>
+	<div class="container">
+		<h1>Welcome to my blog!</h1>
+		<span>please enjoy yourself!</span>
+	</div>
+</header>
+<section class="row">
+	<aside>
+		<div class="container">
+			<ul>
+				<li><a routerLink= "/home">Home</a></li>
+				<li><a routerLink= "/blogs">Blogs</a></li>
+				<li><a routerLink= "/add">Add..</a></li>
+			</ul>
+		</div>
+	</aside>
+
+	router-outlet是作为路由页面插入的渠道，只需对atricle的位置做简单的位置限定即可
+
+	<article>
+		<div class="container">
+			<router-outlet></router-outlet>
+		</div>
+	</article>
+</section>
+<footer>
+	Copyrights.rjw.1995-2017
+</footer>
+-->

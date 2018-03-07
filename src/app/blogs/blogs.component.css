@@ -1,0 +1,63 @@
+.outerDiv li:nth-child(odd)>div{
+    background-color: whitesmoke;
+}
+.outerDiv{
+    margin-left: 4px;
+}
+
+/*
+pass-style
+
+base-css 
+div[class="container-out"] ul li{
+    margin-bottom: 1em;
+    background-color: gainsboro;
+    //border-radius加在这里才会有效果，加在子div上却没有 
+    box-shadow: 0 0 5% whitesmoke;
+    border-radius: 10px;
+
+    transition-property: all;
+    transition-duration: .5s;
+}
+div[class="container-out"] ul li:hover{
+    background-color: whitesmoke;
+    box-shadow: 0 0 5% gainsboro;
+}
+
+
+div[class="container-in"]{
+    padding:0.5em;
+}
+div[class="container-in"] p:nth-child(1){
+    line-height:1.6em;
+    font-size:1.5em;
+    font-weight: bold;
+    //background-color: pink;
+}
+div[class="container-in"] p:nth-child(2){
+    max-height: 100px;
+    overflow: hidden;
+    //background-color: green;
+}
+div[class="container-in"] p:nth-child(3){
+    text-align: right;
+    padding: 20px 10px 0 0;
+    //background-color: grey;
+}
+div[class="container-in"] p:nth-child(3) span{
+    display: inline-block;
+    padding: 4px 10px;
+    font-size:1em;
+    border:1px whitesmoke solid;
+    border-radius: 15px;
+    background-color: silver;
+
+    transition-property: all;
+    transition-duration: .5s;
+}
+
+div[class="container-in"] p:nth-child(3) span:hover{
+    background-color: whitesmoke;
+    border:1px silver solid;
+}
+*/

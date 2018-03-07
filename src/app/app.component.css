@@ -1,0 +1,137 @@
+/* header 和 footer */
+#header{
+	background-color: black;
+	padding-bottom: 16px;
+	margin-bottom: 10px;
+}
+#header h1, #header span{
+	color: white;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+}
+
+/* body */
+aside{
+	background-color: #f5f5f5;
+	padding-top:10px;
+	padding-bottom: 50px;
+}
+article{
+	background-color: white;
+	margin-bottom: 80px;
+}
+
+
+
+
+
+
+
+/*
+	使用定位居中，子元素添加下面的样式
+
+	.center-vertical{
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+
+	} 
+*/
+
+
+/*  pass style
+
+header div[class="container"]{
+	width: 100%;
+	height: 8%;
+	padding-left: 1.5em;
+	background-color: black;
+}
+header div[class="container"] h1{
+	line-height: 2.1em;
+	font-size:2em;
+	font-weight: bold;
+	color: white;
+}
+header div[class="container"] span{
+	display: inline-block;
+	line-height: 1.5em;
+	padding-bottom: 1em;
+	color: white;
+}
+
+ base-css-section 
+以下浮动实现两列分布 
+section{
+	width: 100%;
+	min-height: 100%;
+}
+section:after{
+	content:"";
+	display: block;
+	clear: both;
+	*zoom:1;
+}
+section aside{
+	float: left;
+	width: 20%;
+	background-color: dimgray;
+}
+section aside div[class="container"]{
+	 这里设置字体样式没用?!!!亲测，只对a里面的文字无效，其他的子孙级还是会应用的 
+}
+section aside ul li{
+	width: 100%;
+	 
+		padding padding: .5em;加在这里会比加在上面那层div的效果要好很多，
+		如果加在上面旧手机会看不到字且padding等的em设置值不要过大，不然还是会溢出
+	
+	text-align: center;
+	line-height: 2em;
+	 CSS3属性应用 
+	transition-property: all;
+	transition-duration: .5s;
+}
+section aside ul li:hover{
+	background-color: rgba(169,169,169,.8);
+}
+section aside ul a{
+	color:white;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+base-css-section-article 
+
+section article{
+	float: left;
+	width: 80%;
+	//background-color: yellow;
+}
+section article div[class="container"]{
+	padding:.5em;
+}
+
+base-css-footer 
+
+footer{
+	width: 100%;
+	height: 2em;
+	text-align: center;
+	line-height: 2em;
+	font-size: 1em;
+	font-weight:bold;
+	background-color: #0D0D0D;
+	color:white;
+}	
+
+ base-css-header 
+ */
+
+

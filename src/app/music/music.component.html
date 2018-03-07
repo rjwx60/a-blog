@@ -1,0 +1,52 @@
+<div class="music">
+	<form 
+		class="form-inline form-horizontal"
+		[formGroup]="musicForm"
+		(ngSubmit)="onSubmit(musicForm.value); musicSearch.value=''"
+		>
+		<div class="form-group">
+			<div class="col-md-7 col-lg-7">
+				<input 
+					class="form-control" type="text" 
+					name="musicSearch" id="musicSearch" 
+					placeholder="Search Music.." 
+					#musicSearch
+					[formControl]="musicForm.controls['musicSearch']"/>
+			</div>
+			<div class="col-md-2 col-lg-2">
+				<button type="button" class="btn btn-default" (click)="makeRequest(musicSearch.value)">Search</button>
+			</div>	
+		</div>
+	</form>
+	<ul class="row" *ngIf="hasSource" style="margin-top:20px;">
+		<li 
+			class="col-md-3 col-lg-3"
+			*ngFor="let song of source">
+			<div class="row" style="height: 300px;">
+				<a href="{{song.page}}">
+					<img src="{{song.album.picUrl}}" alt="picture" class="col-md-12 col-lg-12" style="height: 220px;" />
+				</a>
+				<ul class="col-md-12 col-lg-12">
+					<li class="text-center"> 
+						<span *ngFor="let artist of song.artists">
+							{{artist.name}}
+						</span>
+					</li>
+				</ul>
+				<p class="col-md-12 col-lg-12 text-center">{{song.name}}</p>
+			</div>
+		</li>
+	</ul>
+	<div class="row">
+		<p class="col-md-12 col-lg-12 text-danger" *ngIf="!hasSource">Resources can not be found, please enter valid content</p>
+	</div>
+</div>
+
+
+<!--
+<p>
+  <button type="button" class="btn btn-default" (click)="makeRequest()">Search</button>
+  <button type="button" class="btn btn-default" (click)="makeAnotherRequest()">Test</button>
+</p>
+-->
+

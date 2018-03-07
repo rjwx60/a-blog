@@ -1,0 +1,51 @@
+.add{
+	margin-bottom: 56%;
+}
+/*
+past base-css
+div[class="container-out"]{
+	text-align: center;
+	background-color: red;
+}
+div[class="container-in"]{
+	display: inline-block;
+	width: 90%;
+	padding: 1em;
+	background-color: orange;
+	text-align: left;
+}
+div[class="container-in"] div{
+	margin:1.2em 0;
+}
+
+div[class="container-in"] div:nth-child(1){}
+div[class="container-in"] div:nth-child(1) label{
+    vertical-align: top;
+}
+div[class="container-in"] div:nth-child(1) input{
+    min-width: 90%;
+    min-height: 2em;
+}
+div[class="container-in"] div:nth-child(2){}
+div[class="container-in"] div:nth-child(2) label{
+    vertical-align: top;
+}
+div[class="container-in"] div:nth-child(2) textarea{
+	min-width: 90%;
+	min-height: 4em;
+	max-width: 90%;
+	max-height: 10em;
+}
+
+div[class="container-in"] div[class="save"]{
+    text-align: right;
+    padding-right: 5em;
+}
+div[class="save"] span{
+    cursor: pointer;
+    padding:4px 6px;
+    border:2px black solid;
+    border-radius:5px;
+}
+*/
+

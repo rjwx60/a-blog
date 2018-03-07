@@ -1,0 +1,78 @@
+<div class="add">
+	<form 
+		class="form-horizontal" 
+		[formGroup]="myForm" 
+		(ngSubmit)="onSubmit(myForm.value); title.value=''; text.value='' ">
+		<div class="form-group">
+			<label class="col-md-1 col-lg-1 control-label" for="title">Title</label>
+			<div class="col-md-8 col-lg-8">
+				<input 
+					class="form-control" type="text" 
+					id="title" name="title"
+					placeholder="Title" 
+					#title  
+					[formControl]="myForm.controls['title']"/>
+			</div>
+			<!-- <span class="col-md-3 col-lg-3 text-danger" *ngIf="myForm.hasError('required','title')">text is required</span> -->
+			<!-- <span class="col-md-3 col-lg-3 text-danger" *ngIf="myForm.controls['title'].hasError('required')">Title is required</span> -->
+			<!-- <span class="col-md-3 col-lg-3 text-danger" *ngIf="myForm.hasError('invalidValue','title')">title should be start in '123'</span> -->
+			<!-- <span class="col-md-3 col-lg-3 text-danger" *ngIf="myForm.controls['title'].hasError('invalidValue')">The title consists at least 2 words</span> -->
+			<span class="col-md-3 col-lg-3 text-danger" *ngIf="formTitleValid">The title consists at least 2 words</span>
+		</div>
+
+		<div class="form-group">
+			<label class="col-md-1 col-lg-1 control-label" for="text">Text</label>
+			<div class="col-md-8 col-lg-8">
+				<textarea 
+					class="form-control" rows="4" 
+					id="text" name="text"
+					placeholder="Please write down your blogs here.."
+					#text  
+					[formControl]="myForm.controls['text']"></textarea>
+			</div>
+			<!-- <span class="col-md-3 col-lg-3 text-danger" *ngIf="myForm.hasError('required','text')">text is required</span> -->
+			<!-- <span class="col-md-3 col-lg-3 text-danger" *ngIf="myForm.hasError('required','text')">text is required</span> -->
+			<span class="col-md-3 col-lg-3 text-danger" *ngIf="formTextValid">text is required</span>
+		</div>
+
+		<div class="form-group">
+		    <div class="col-md-offset-1 col-lg-offset-1 col-md-6 col-lg-6">
+		      <button type="submit" class="btn btn-default">Save</button>
+		      <!-- <span class="text-danger" *ngIf="!myForm.valid">Form is invalid.</span> -->
+		      <span class="text-danger" style="margin-left: 20px;" *ngIf="formValid">Form is invalid.</span>
+		    </div>
+
+		</div>
+	</form>
+</div>
+
+<!-- 
+	旧版，没有用 form-group form-control 组件，会提示下面的错误
+	Angular is running in the development mode. Call enableProdMode() to enable the production mode. 
+
+		<div class="form-group">
+		    <div class="col-md-offset-1 col-lg-offset-1 col-md-11 col-lg-11">
+		      <button type="submit" class="btn btn-default" (click)="addBlog(title.value,text.value); title.value=''; text.value=''">Save</button>
+		    </div>
+		</div>
+-->
+
+
+<!--
+<div class="container-out">
+	<div class="container-in">
+		<div>
+			<label for="title">Title: </label>
+			<input type="text" id="title" name="title" #title placeholder="Title"/>
+		</div>
+		<div>
+			<label for="text">Text: </label>
+			<textarea id="text" name="text" #text placeholder="Please write down your blogs here.."></textarea>
+		</div>
+		<div class="save" (click)="addBlog(title.value,text.value); title.value=''; text.value=''">
+			<span>Save</span>
+		</div>
+	</div>
+</div>
+-->
+

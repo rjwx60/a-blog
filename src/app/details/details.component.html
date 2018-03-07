@@ -1,0 +1,39 @@
+<div class="container-out" *ngIf="blog">
+	<ul>
+		<li>
+			<div class="container-in">
+				<h2>{{blog.title}}</h2>
+				<p>{{blog.text}}</p>
+				<strong>posted on {{blog.postTime}}</strong>
+			</div>
+		</li>
+	</ul>
+	<div class="pull-right" (click)="goBack()">
+		<button type="button" class="btn btn-default">Back</button>
+	</div>
+	<div class="pull-right" (click)="goDelete(blog)">
+		<button type="button" class=" btn btn-default">Delete</button>
+	</div>
+</div>
+
+
+<!--
+<div class="container-out" *ngIf="blog">
+	<ul>
+		<li>
+			<div class="container-in">
+				<p>{{blog.title}}</p>
+				<p>{{blog.text}}</p>
+				<p>posted on {{blog.postTime}}</p>
+			</div>
+		</li>
+	</ul>
+	<div class="back" (click)="goBack()">
+		<span >Back</span>
+	</div>
+	<div class="delete" (click)="goDelete(blog)">
+		<span>Delete</span>
+	</div>
+</div>
+
+-->

@@ -1,0 +1,24 @@
+<div class="outerDiv">
+	<ul class="row">
+		<!-- 两个同名事件函数不能写在同一个标签內，否则会后者覆盖前者 -->
+		<li 
+			class="col-md-12 col-lg-12"
+			*ngFor="let blog of blogs">
+			<div  
+				class="row innerDiv" 
+				(click)="onSelected(blog)">
+				<h2 class="col-md-12 col-lg-12 text-left">{{blog.title}}</h2>
+				<p class="col-md-12 col-lg-12 text-left">{{blog.text}}</p>
+				<p class="pull-right">
+					<button 
+						type="button"
+						class="btn btn-default btn-sm"
+						(click)="gotoDetail()">view Details</button>
+					<span>posted on {{blog.postTime}}</span>
+					<!-- <span *ngIf="selectorblog" (click)="gotoDetail()">view details</span> -->
+				</p>
+			</div>
+			
+		</li>
+	</ul>
+</div>
